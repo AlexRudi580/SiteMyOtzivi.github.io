@@ -1,0 +1,197 @@
+/* Общие стили */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f9fafb;
+    margin: 0;
+    padding: 0;
+    background-image: url('background.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #333;
+    transition: background-color 0.3s ease-in-out;
+}
+
+/* Заголовок */
+header {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 30px;
+    border-bottom: 5px solid #2e7d32;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+header h1 {
+    font-size: 40px;
+    margin: 0;
+    letter-spacing: 2px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Основная форма отзыва */
+#review-form {
+    background-color: white;
+    padding: 40px;
+    margin: 50px auto;
+    border-radius: 12px;
+    max-width: 800px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Анимация появления */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Поля ввода */
+input, select, textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+input:focus, select:focus, textarea:focus {
+    border-color: #4CAF50;
+    outline: none;
+}
+
+textarea {
+    resize: vertical;
+}
+
+/* Кнопка отправки */
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 8px;
+    cursor: pointer;
+    border: none;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+    background-color: #388e3c;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Секции с отзывами */
+#reviews {
+    margin-top: 60px;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Кнопки фильтрации */
+.buttons-container, .stars-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.filter-button, .star-button {
+    padding: 12px 25px;
+    background-color: rgba(255, 255, 255, 0.5);
+    color: #333;
+    border: 2px solid transparent;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+}
+
+.filter-button:hover, .star-button:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.filter-button.active, .star-button.active {
+    background-color: #4CAF50;
+    color: white;
+    border-color: #4CAF50;
+    font-weight: bold;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Стили для отзывов */
+#reviews-list {
+    list-style: none;
+    padding: 0;
+}
+
+#reviews-list li {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+#reviews-list li:hover {
+    background-color: #f1f1f1;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+#reviews-list li strong {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+
+.star-rating {
+    color: gold;
+}
+
+.review-item {
+    font-size: 16px;
+    color: #555;
+}
+
+/* Адаптивность */
+@media screen and (max-width: 768px) {
+    header h1 {
+        font-size: 30px;
+    }
+
+    #review-form {
+        padding: 20px;
+        margin: 20px;
+    }
+
+    button {
+        padding: 12px 24px;
+    }
+
+    .filter-button, .star-button {
+        font-size: 14px;
+        padding: 8px 15px;
+    }
+
+    #reviews-list li {
+        font-size: 14px;
+    }
+}
