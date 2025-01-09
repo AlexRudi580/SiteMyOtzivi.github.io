@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Відгуки про Олексія Рудковського</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <h1>Відгуки про Рудківського Олексія</h1>
+        </div>
+    </header>
+
+    <main>
+        <section id="review-form">
+            <h2>Залиште свій відгук</h2>
+            <form id="reviewForm">
+                <input type="text" id="name" placeholder="Ваше ім'я" required>
+                <select id="rating" required>
+                    <option value="5">5 - Відмінно</option>
+                    <option value="4">4 - Добре</option>
+                    <option value="3">3 - Задовільно</option>
+                    <option value="2">2 - Погано</option>
+                    <option value="1">1 - Дуже погано</option>
+                </select>
+                <textarea id="comment" rows="4" placeholder="Напишіть про мене..." required></textarea>
+                <select id="specialty" required>
+                    <option value="programming">Програмування</option>
+                    <option value="design">Дизайн</option>
+                    <option value="analytics">Аналітика</option>
+                    <option value="mathematics">Математика</option>
+                    <option value="english">Англійська</option>
+                    <option value="german">Німецька</option>
+                </select>
+                <button type="submit">Відправити</button>
+            </form>
+        </section>
+
+        <section id="reviews">
+            <h2>Відгуки</h2>
+
+            <!-- Фільтри категорій -->
+            <div class="buttons-container">
+                <button class="filter-button active" data-category="all">Усі</button>
+                <button class="filter-button" data-category="programming">Програмування</button>
+                <button class="filter-button" data-category="design">Дизайн</button>
+                <button class="filter-button" data-category="analytics">Аналітика</button>
+                <button class="filter-button" data-category="mathematics">Математика</button>
+                <button class="filter-button" data-category="english">Англійська</button>
+                <button class="filter-button" data-category="german">Німецька</button>
+            </div>
+
+            <!-- Фільтри зірок -->
+            <div class="stars-container">
+                <button class="star-button active" data-rating="all">Усі зірки</button>
+                <button class="star-button" data-rating="5">5 ★</button>
+                <button class="star-button" data-rating="4">4 ★</button>
+                <button class="star-button" data-rating="3">3 ★</button>
+                <button class="star-button" data-rating="2">2 ★</button>
+                <button class="star-button" data-rating="1">1 ★</button>
+            </div>
+
+            <!-- Категорії відгуків -->
+            <div id="reviews-list">
+                <!-- Відгуки будуть додаватися тут -->
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
